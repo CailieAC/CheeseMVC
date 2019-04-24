@@ -1,7 +1,23 @@
 ﻿
 @{
-    Layout = null;
+    
 }
 
 <h1>My Cheeses</h1>
+
+<p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
+
+@if (ViewBag.cheeses.Count == 0)
+{
+    <p>No cheeses yet!</p>
+}
+
+<ul>
+    <!--precede all C# code with the @@ symbol-->
+    @foreach (KeyValuePair<string, string> cheese in ViewBag.cheeses)
+    {
+        <li>@cheese.Key: @cheese.Value</li>
+
+    }
+</ul>
 
