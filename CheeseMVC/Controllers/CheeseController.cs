@@ -30,7 +30,7 @@ namespace CheeseMVC.Controllers
             //Add the new cheese to my existing cheeses
             Cheeses.Add(name, description);
 
-            return Redirect("/Cheese");
+            return RedirectToAction(actionName: nameof(Index));
         }
 
         /*
