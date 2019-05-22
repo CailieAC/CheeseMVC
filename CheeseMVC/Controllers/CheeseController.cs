@@ -47,7 +47,7 @@ namespace CheeseMVC.Controllers
             newCheese.Name = name;
             */
 
-            return Redirect("/Cheese");
+            return RedirectToAction(actionName: nameof(Index));
         }
 
         /*
